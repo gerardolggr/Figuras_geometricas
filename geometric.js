@@ -74,3 +74,31 @@ function calcularAreaTriangulo(){
     const result = `El área del Triángulo es: ${areaTriangulo(valueBaseTriangulo, valueHeightTriangulo)} cm^2`;
     valueResult.innerHTML = result;
 }
+
+//área y perímetro de un círculo
+const perimetroCirculo = (diametro) => diametro * Math.PI;
+const areaCirculo = (radio) => Math.PI * (radio ** 2);
+
+//Obtiene el radio ingresado del input
+let inputRadio = document.getElementById('radio');
+
+function calcularPerimetroCirculo() {
+    let value = Number(inputRadio.value);
+
+    const result = `El perímetro del Círculo es: ${perimetroCirculo(value).toFixed(3)} cm`;
+    valueResult.innerText = result;
+}
+
+function calcularAreaCirculo() {
+    let value = Number(inputRadio.value);
+
+    const result = `El área del Círculo es: ${areaCirculo(value).toFixed(3)} cm`;
+    valueResult.innerText = result;
+}
+
+function calcularDiametro() {
+    let value = Number(inputRadio.value);
+
+    const result = `El diametro del Círculo es: ${value**2} cm`;
+    valueResult.innerText = result;
+}
